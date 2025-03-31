@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: cloud-native-spring
+
+server:
+  port: 9001
+  tomcat:
+    connection-timeout: 2s    #  연결을 기다리는 최대의 시간 
+    keep-alive-timeout: 15s   # keep-alive 연결을 유지하는 시간
+    threads:
+      max: 50                 # 최대 스레드 수
+      min-spare: 5            # 풀에 유지할 최소 스레드 수
