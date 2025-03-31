@@ -29,9 +29,9 @@ jobs:
           fail-build: false # 검사 실패시 빌드를 실패로 처리하지 않는다.
           severity-cutoff: high # 검사 결과 중 high 이상의 취약점만 출력한다.
           output-format: sarif
-          output: scan-report.sarif # SARIF 파일 경로 지정
+          output-file: scan-report.sarif # SARIF 파일 경로 지정
       - name: Upload vulnerability report
         uses: github/codeql-action/upload-sarif@v3
         if: success() || failure() # 이전 단계가 실패하더라도 리포트는 전송
         with:
-          sarif_file: scan-report.sarif # 위에서 지정한 SARIF 파일 경로
+          sarif_file: scan-report.sarif # 위에서 지정한 SARIF 파일 경로를 지정한다.
