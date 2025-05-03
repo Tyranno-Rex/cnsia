@@ -10,3 +10,7 @@ server:
     threads:
       max: 50                 # 최대 스레드 수
       min-spare: 5            # 풀에 유지할 최소 스레드 수
+
+cnsia:
+  application_name: cnsia
+  
